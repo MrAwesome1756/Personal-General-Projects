@@ -1,0 +1,14 @@
+# generated media and personal data
+outputs/
+datasets/
+*.safetensors
+*.ckpt
+
+# machine-specific settings
+studio.config.local.json
+training/active.json
+
+# python
+__pycache__/
+*.pyc
+.venv/

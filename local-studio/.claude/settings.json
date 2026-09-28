@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m studio:*)",
+      "Bash(python -m unittest:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(ffprobe:*)"
+    ]
+  }
+}

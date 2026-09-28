@@ -1,0 +1,80 @@
+{
+  "about": "Fixed nightly evaluation set. Same prompts + same seed every night so results are comparable over time. Prompts with needs_trigger only run when a trained LoRA is active; {trigger} is replaced with the plan's trigger word.",
+  "prompts": [
+    {
+      "id": "portrait_window",
+      "category": "skin & faces",
+      "prompt": "Photorealistic close-up portrait of a man in his 30s by a large window, soft overcast daylight, visible skin texture and pores, natural imperfections, 85mm lens at f/1.8, shallow depth of field, subtle film grain",
+      "negative": "plastic skin, airbrushed, cartoon, 3d render, deformed, extra fingers, watermark, text"
+    },
+    {
+      "id": "hands_coffee",
+      "category": "hands & anatomy",
+      "prompt": "Photorealistic close-up of two hands wrapped around a ceramic coffee mug on a wooden desk, morning side light, steam rising, 50mm lens, every finger clearly visible and anatomically correct",
+      "negative": "extra fingers, fused fingers, missing fingers, deformed hands, blurry, watermark"
+    },
+    {
+      "id": "office_meeting",
+      "category": "multiple people",
+      "prompt": "Documentary-style photo of three colleagues reviewing documents at a conference table in a modern glass-walled office, candid expressions, natural window light, 35mm lens, eye-level, realistic business attire",
+      "negative": "stock photo smile, deformed faces, extra limbs, plastic skin, watermark, text"
+    },
+    {
+      "id": "storefront_dusk",
+      "category": "architecture & lighting",
+      "prompt": "Photorealistic small-business storefront on a main street at blue hour, warm interior light spilling onto the sidewalk, wet pavement reflections, 24mm lens, low angle, straight vertical lines",
+      "negative": "warped lines, distorted perspective, cartoon, oversaturated, watermark"
+    },
+    {
+      "id": "commercial_property_aerial",
+      "category": "real estate",
+      "prompt": "Aerial drone photograph of a modern two-story commercial office building with a parking lot and landscaping, golden hour, long soft shadows, high detail, realistic cars, 3/4 angle from 120 feet",
+      "negative": "toy-like, tilt-shift, warped geometry, cartoon, watermark"
+    },
+    {
+      "id": "product_macro",
+      "category": "materials & detail",
+      "prompt": "Macro product photograph of a brushed-steel fountain pen resting on an open leather notebook, controlled studio lighting with soft rim light, crisp reflections, 100mm macro lens, black background",
+      "negative": "blurry, noisy, plastic look, deformed, watermark, text"
+    },
+    {
+      "id": "sign_text",
+      "category": "in-image text",
+      "prompt": "Photorealistic brass plaque mounted on a brick wall that reads exactly \"FAST CAPITAL\" in clean serif letters, afternoon sun, shallow depth of field, 50mm lens",
+      "negative": "misspelled text, garbled letters, extra letters, watermark"
+    },
+    {
+      "id": "cinematic_lowangle",
+      "category": "camera & composition",
+      "prompt": "Cinematic low-angle wide shot of a businesswoman walking toward camera across a city plaza at sunrise, backlit rim light, long shadows, anamorphic 40mm lens, subtle lens flare, teal-and-orange grade, film still",
+      "negative": "deformed, extra limbs, blurry face, cartoon, watermark, text"
+    },
+    {
+      "id": "night_neon",
+      "category": "low light",
+      "prompt": "Photorealistic night street scene in the rain, neon shop signs reflecting in puddles, a person with an umbrella in the midground, 35mm lens at f/1.4, high ISO grain, moody and realistic",
+      "negative": "cartoon, overexposed, garbled text, deformed, watermark"
+    },
+    {
+      "id": "subject_headshot",
+      "category": "trained subject",
+      "needs_trigger": true,
+      "prompt": "Professional headshot of {trigger}, navy suit, neutral gray studio backdrop, soft key light with gentle fill, 85mm lens at f/2.8, sharp eyes, natural skin texture",
+      "negative": "plastic skin, cartoon, deformed, watermark, text"
+    },
+    {
+      "id": "subject_environment",
+      "category": "trained subject",
+      "needs_trigger": true,
+      "prompt": "Candid photo of {trigger} laughing while talking on the phone on an office rooftop terrace at golden hour, city skyline behind, 50mm lens, shallow depth of field, natural pose",
+      "negative": "plastic skin, cartoon, deformed hands, watermark, text"
+    },
+    {
+      "id": "subject_profile",
+      "category": "trained subject",
+      "needs_trigger": true,
+      "prompt": "Side-profile portrait of {trigger} looking out a rainy window, low-key moody lighting, 105mm lens, cinematic film still",
+      "negative": "plastic skin, cartoon, deformed, watermark, text"
+    }
+  ]
+}

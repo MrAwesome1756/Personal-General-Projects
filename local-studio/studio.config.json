@@ -1,0 +1,50 @@
+{
+  "comfy_url": "http://127.0.0.1:8188",
+  "output_dir": "outputs",
+
+  "workflows": {
+    "smoke": "workflows/smoke_sdxl_t2i.json",
+    "image": "workflows/image_t2i.json",
+    "video_i2v": "workflows/video_i2v.json",
+    "video_t2v": "workflows/video_t2v.json"
+  },
+
+  "timeouts": {
+    "image_s": 900,
+    "video_s": 5400
+  },
+
+  "gpu": {
+    "index": 0,
+    "min_free_vram_mb": 20000,
+    "max_utilization_pct": 40,
+    "wait_minutes": 45,
+    "unload_models_after_job": false
+  },
+
+  "comfy": {
+    "dir": "",
+    "python": "",
+    "loras_dir": ""
+  },
+
+  "ai_toolkit": {
+    "dir": "",
+    "python": ""
+  },
+
+  "nightly": {
+    "plan_file": "training/active.json",
+    "eval_prompts": "eval/prompts.json",
+    "eval_seed": 424242,
+    "eval_width": 1024,
+    "eval_height": 1024,
+    "review_with_claude": true
+  },
+
+  "claude": {
+    "command": "claude",
+    "review_prompt_file": "nightly/NIGHTLY_REVIEW_PROMPT.md",
+    "allowed_tools": "Read,Write,Edit,Glob,Grep,Bash(python -m studio:*)"
+  }
+}
