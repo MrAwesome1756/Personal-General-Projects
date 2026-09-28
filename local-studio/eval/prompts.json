@@ -1,80 +1,98 @@
 {
-  "about": "Fixed nightly evaluation set. Same prompts + same seed every night so results are comparable over time. Prompts with needs_trigger only run when a trained LoRA is active; {trigger} is replaced with the plan's trigger word.",
+  "about": "Fixed nightly evaluation set: premium photorealistic objects, real materials, textures, angles and in-image text. Same prompts + same seed every night so results are comparable over time. Prompts with needs_trigger only run when a trained style LoRA is active; {trigger} is replaced with the plan's trigger word.",
   "prompts": [
     {
-      "id": "portrait_window",
-      "category": "skin & faces",
-      "prompt": "Photorealistic close-up portrait of a man in his 30s by a large window, soft overcast daylight, visible skin texture and pores, natural imperfections, 85mm lens at f/1.8, shallow depth of field, subtle film grain",
-      "negative": "plastic skin, airbrushed, cartoon, 3d render, deformed, extra fingers, watermark, text"
+      "id": "brushed_steel_watch",
+      "category": "metal",
+      "prompt": "Premium product photograph of a brushed-steel automatic wristwatch lying on dark slate, three-quarter angle, soft key light from above left with a thin rim light tracing the case edge, crisp brushed grain on the steel, sapphire crystal reflections, 100mm macro lens at f/5.6, black background",
+      "negative": "plastic look, blurry, warped numerals, extra hands, watermark"
     },
     {
-      "id": "hands_coffee",
-      "category": "hands & anatomy",
-      "prompt": "Photorealistic close-up of two hands wrapped around a ceramic coffee mug on a wooden desk, morning side light, steam rising, 50mm lens, every finger clearly visible and anatomically correct",
-      "negative": "extra fingers, fused fingers, missing fingers, deformed hands, blurry, watermark"
+      "id": "glass_liquid_backlit",
+      "category": "glass & liquid",
+      "prompt": "Photorealistic studio shot of a heavy crystal whiskey glass with amber liquid and a single clear ice cube, backlit through a softbox so the liquid glows, caustic light patterns on the white marble surface, condensation droplets on the glass, 85mm lens, low eye-level angle",
+      "negative": "cartoon, fake reflections, deformed glass, watermark, text"
     },
     {
-      "id": "office_meeting",
-      "category": "multiple people",
-      "prompt": "Documentary-style photo of three colleagues reviewing documents at a conference table in a modern glass-walled office, candid expressions, natural window light, 35mm lens, eye-level, realistic business attire",
-      "negative": "stock photo smile, deformed faces, extra limbs, plastic skin, watermark, text"
+      "id": "walnut_grain_macro",
+      "category": "wood",
+      "prompt": "Extreme macro photograph of an oiled walnut tabletop edge, raking side light revealing deep wood grain, pores and fine sanding marks, shallow depth of field falling off into warm shadow, 100mm macro lens at f/2.8",
+      "negative": "flat lighting, plastic, painted texture, blurry, watermark"
     },
     {
-      "id": "storefront_dusk",
-      "category": "architecture & lighting",
-      "prompt": "Photorealistic small-business storefront on a main street at blue hour, warm interior light spilling onto the sidewalk, wet pavement reflections, 24mm lens, low angle, straight vertical lines",
-      "negative": "warped lines, distorted perspective, cartoon, oversaturated, watermark"
+      "id": "leather_stitching",
+      "category": "leather & fabric",
+      "prompt": "Close-up product photograph of a full-grain tan leather wallet with visible saddle stitching, natural creases and pebbled grain, resting on folded raw denim, soft window light from the right, 50mm lens at f/4, top-down 45 degree angle",
+      "negative": "vinyl look, smooth plastic, blurry stitching, watermark"
     },
     {
-      "id": "commercial_property_aerial",
-      "category": "real estate",
-      "prompt": "Aerial drone photograph of a modern two-story commercial office building with a parking lot and landscaping, golden hour, long soft shadows, high detail, realistic cars, 3/4 angle from 120 feet",
-      "negative": "toy-like, tilt-shift, warped geometry, cartoon, watermark"
+      "id": "ceramic_stoneware",
+      "category": "ceramic & stone",
+      "prompt": "Still life photograph of a handmade matte stoneware mug with a speckled glaze and an unglazed foot ring, on a rough linen cloth next to a river stone, overcast daylight, subtle shadows, 35mm lens at eye level, natural color",
+      "negative": "glossy plastic, CGI, perfect symmetry, watermark, text"
     },
     {
-      "id": "product_macro",
-      "category": "materials & detail",
-      "prompt": "Macro product photograph of a brushed-steel fountain pen resting on an open leather notebook, controlled studio lighting with soft rim light, crisp reflections, 100mm macro lens, black background",
-      "negative": "blurry, noisy, plastic look, deformed, watermark, text"
+      "id": "chrome_reflections",
+      "category": "reflective surfaces",
+      "prompt": "Photorealistic hero shot of a polished chrome espresso machine on a black quartz counter, controlled studio reflections with long strip softboxes, perfectly clean highlights, low 3/4 angle, 50mm lens, dark moody background",
+      "negative": "distorted reflections, warped geometry, cartoon, watermark"
     },
     {
-      "id": "sign_text",
+      "id": "text_embossed_packaging",
       "category": "in-image text",
-      "prompt": "Photorealistic brass plaque mounted on a brick wall that reads exactly \"FAST CAPITAL\" in clean serif letters, afternoon sun, shallow depth of field, 50mm lens",
-      "negative": "misspelled text, garbled letters, extra letters, watermark"
+      "prompt": "Premium product photograph of a matte black gift box with the word \"ATLAS\" embossed in gold foil on the lid, exact clean serif lettering, soft top light catching the foil edges, box slightly open, 85mm lens, three-quarter angle, seamless charcoal backdrop",
+      "negative": "misspelled text, garbled letters, extra letters, blurry foil, watermark"
     },
     {
-      "id": "cinematic_lowangle",
-      "category": "camera & composition",
-      "prompt": "Cinematic low-angle wide shot of a businesswoman walking toward camera across a city plaza at sunrise, backlit rim light, long shadows, anamorphic 40mm lens, subtle lens flare, teal-and-orange grade, film still",
-      "negative": "deformed, extra limbs, blurry face, cartoon, watermark, text"
+      "id": "text_engraved_metal",
+      "category": "in-image text",
+      "prompt": "Macro photograph of a solid brass plate engraved with the text \"MADE BY HAND\" in crisp sans-serif capitals, raking light showing the depth of the engraving and tiny tool marks, slight patina, 100mm macro lens at f/8",
+      "negative": "misspelled text, garbled letters, printed-on look, watermark"
     },
     {
-      "id": "night_neon",
-      "category": "low light",
-      "prompt": "Photorealistic night street scene in the rain, neon shop signs reflecting in puddles, a person with an umbrella in the midground, 35mm lens at f/1.4, high ISO grain, moody and realistic",
-      "negative": "cartoon, overexposed, garbled text, deformed, watermark"
+      "id": "sneaker_top_down",
+      "category": "angles: flat lay",
+      "prompt": "Top-down flat lay photograph of a white leather sneaker with a gum sole, laces neatly arranged, on textured off-white paper with soft shadows, even diffused light, every stitch and perforation visible, 50mm lens directly overhead",
+      "negative": "deformed shoe, melted laces, extra soles, watermark, text"
     },
     {
-      "id": "subject_headshot",
-      "category": "trained subject",
+      "id": "headphones_low_angle",
+      "category": "angles: dramatic",
+      "prompt": "Dramatic low-angle product photograph of over-ear headphones standing on a concrete plinth, anodized aluminum and soft protein-leather ear pads, hard key light from behind creating a bright rim and long shadow, light haze, 35mm lens, cinematic",
+      "negative": "plastic look, warped headband, cartoon, watermark, text"
+    },
+    {
+      "id": "citrus_water_splash",
+      "category": "motion freeze",
+      "prompt": "High-speed photograph of a lemon slice dropping into sparkling water, frozen splash crowns and bubbles, backlit with a clean white gradient, realistic citrus pulp texture, 100mm lens, 1/8000s look",
+      "negative": "cartoon splash, blurry, CGI liquid, watermark"
+    },
+    {
+      "id": "workshop_environment",
+      "category": "environment still life",
+      "prompt": "Photorealistic still life on a woodworker's bench: a hand plane, curled wood shavings, a steel square and a pencil, warm late-afternoon sun through a dusty window with visible light beams, 35mm lens, shallow depth of field",
+      "negative": "cartoon, warped tools, extra objects floating, watermark, text"
+    },
+    {
+      "id": "style_perfume",
+      "category": "trained style",
       "needs_trigger": true,
-      "prompt": "Professional headshot of {trigger}, navy suit, neutral gray studio backdrop, soft key light with gentle fill, 85mm lens at f/2.8, sharp eyes, natural skin texture",
-      "negative": "plastic skin, cartoon, deformed, watermark, text"
+      "prompt": "{trigger}, product photograph of a faceted glass perfume bottle with a brass cap on wet black stone, three-quarter angle",
+      "negative": "cartoon, garbled text, watermark"
     },
     {
-      "id": "subject_environment",
-      "category": "trained subject",
+      "id": "style_knife",
+      "category": "trained style",
       "needs_trigger": true,
-      "prompt": "Candid photo of {trigger} laughing while talking on the phone on an office rooftop terrace at golden hour, city skyline behind, 50mm lens, shallow depth of field, natural pose",
-      "negative": "plastic skin, cartoon, deformed hands, watermark, text"
+      "prompt": "{trigger}, close-up of a Damascus steel chef's knife with a walnut handle on an end-grain cutting board",
+      "negative": "deformed blade, cartoon, watermark"
     },
     {
-      "id": "subject_profile",
-      "category": "trained subject",
+      "id": "style_speaker",
+      "category": "trained style",
       "needs_trigger": true,
-      "prompt": "Side-profile portrait of {trigger} looking out a rainy window, low-key moody lighting, 105mm lens, cinematic film still",
-      "negative": "plastic skin, cartoon, deformed, watermark, text"
+      "prompt": "{trigger}, hero shot of a fabric-covered bluetooth speaker on a travertine plinth, low angle",
+      "negative": "plastic look, cartoon, watermark, text"
     }
   ]
 }

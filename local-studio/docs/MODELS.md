@@ -6,7 +6,7 @@ reflects public information as of September 2026.
 
 ## Recommended starting set (RTX 5090, 32 GB)
 
-| Role | Model | License (verify) | Business use for Serve Funding? | Fits 5090? | Fits 4070 (12 GB)? |
+| Role | Model | License (verify) | Commercial use? | Fits 5090? | Fits 4070 (12 GB)? |
 |---|---|---|---|---|---|
 | Smoke test | SDXL base 1.0 | CreativeML OpenRAIL++-M | Yes, with use restrictions | Yes | Yes |
 | **Main photoreal stills** | **Qwen-Image** (latest release) | Apache-2.0 for the original release; newer versions may use a different license | Yes if Apache-2.0; check the version you download | Yes (FP8/BF16) | Quantized only |
@@ -18,14 +18,15 @@ reflects public information as of September 2026.
 | Upscaling | Real-ESRGAN / 4x upscalers | Varies (Real-ESRGAN is BSD-3) | Yes (Real-ESRGAN) | Yes | Yes |
 | Training | ostris/ai-toolkit | MIT | Yes (tool) | Yes | Small LoRAs only |
 
-**Default for anything public-facing (Serve Funding): Qwen-Image or HiDream for stills, Wan 2.2 for video.**
+**Default for anything that may be used commercially: Qwen-Image or HiDream for stills, Wan 2.2 for video.**
+Qwen-Image is also the strongest local model for exact in-image text (engraving, packaging, signage).
 
 ## Rough expectations on a 5090
 Estimates from published benchmarks; `python -m studio benchmark` gives real numbers on this machine.
 - Stills: roughly 5–40 s per ~1 MP image depending on model, steps and precision.
 - Wan 2.2 14B image-to-video: several minutes per 5 s 720p clip. The 5B model is much faster.
 - LTX-2.x: short 720p clips in well under a minute.
-- LoRA training: about 1–3 h for a person or style LoRA (fits in one night).
+- LoRA training: about 1–3 h for a style/material LoRA (fits in one night).
 
 ## Resolutions (keep to what the model was trained on)
 - Qwen-Image: around 1.3 MP. Examples: 1328×1328, 1664×928 (16:9), 928×1664 (9:16), 1472×1140 (4:3).

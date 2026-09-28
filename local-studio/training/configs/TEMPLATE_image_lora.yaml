@@ -1,15 +1,15 @@
-# REFERENCE VALUES for an ai-toolkit image LoRA (e.g. a consistent person).
+# REFERENCE VALUES for an ai-toolkit image LoRA: a premium photoreal materials/product look.
 # Do not run this file as-is. Copy the example config for your base model from
 # <ai-toolkit>/config/examples/ (it matches your installed version), then apply
 # the values marked "OURS" below. Field names can differ between ai-toolkit versions.
 job: extension
 config:
-  name: "camden_v1"                      # OURS: versioned name; matches training/active.json "name"
+  name: "materials_v1"                   # OURS: versioned name; matches training/active.json "name"
   process:
     - type: "sd_trainer"
       training_folder: "output"          # ai-toolkit writes output/<name>/ -> set active.json "output_dir" to it
       device: "cuda:0"
-      trigger_word: "cmdn person"        # OURS
+      trigger_word: "prmtx style"        # OURS
       network:
         type: "lora"
         linear: 16                       # OURS: rank 16 to start; 8 if overfitting/artifacts
@@ -17,16 +17,16 @@ config:
       save:
         dtype: "float16"
         save_every: 250                  # OURS: lets us fall back to an earlier checkpoint if overfit
-        max_step_saves_to_keep: 6
+        max_step_saves_to_keep: 8
       datasets:
-        - folder_path: "D:/AI/datasets/camden_v1"   # OURS: dataset outside the repo
+        - folder_path: "D:/AI/datasets/materials_v1"   # OURS: dataset outside the repo (rights-cleared images only)
           caption_ext: "txt"
           caption_dropout_rate: 0.05
           cache_latents_to_disk: true
-          resolution: [768, 1024]
+          resolution: [768, 1024, 1328]
       train:
         batch_size: 1
-        steps: 2000                      # OURS: 1500-2500 for a person
+        steps: 2500                      # OURS: 2000-3000 for a style/look
         gradient_accumulation_steps: 1
         gradient_checkpointing: true
         optimizer: "adamw8bit"
@@ -42,10 +42,11 @@ config:
         width: 1024
         height: 1024
         seed: 42
-        prompts:                         # OURS: quick in-training previews
-          - "cmdn person, professional headshot, navy suit, gray studio backdrop, 85mm"
-          - "cmdn person, laughing on a rooftop terrace at golden hour, 50mm"
-          - "cmdn person, side profile by a rainy window, moody light"
+        prompts:                         # OURS: quick in-training previews across materials + text
+          - "prmtx style, a brushed-steel wristwatch on dark slate, three-quarter angle, thin rim light, macro lens"
+          - "prmtx style, a crystal glass of amber liquid backlit on white marble, caustics, condensation"
+          - "prmtx style, a matte black box with the word \"ATLAS\" embossed in gold foil, soft top light"
+          - "prmtx style, a handmade speckled stoneware mug on rough linen, overcast daylight"
 meta:
   name: "[name]"
   version: "1.0"

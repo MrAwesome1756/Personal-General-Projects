@@ -3,10 +3,10 @@
 A training "plan" (training/active.json) says what to train next:
 {
   "enabled": true,
-  "name": "camden_v1",
-  "config": "training/configs/camden_v1.yaml",   # ai-toolkit config
-  "output_dir": "C:/AI/ai-toolkit/output/camden_v1",  # where ai-toolkit writes .safetensors
-  "trigger": "cmdn person",
+  "name": "materials_v1",
+  "config": "training/configs/materials_v1.yaml",   # ai-toolkit config
+  "output_dir": "C:/AI/ai-toolkit/output/materials_v1",  # where ai-toolkit writes .safetensors
+  "trigger": "prmtx style",
   "lora_strength": 1.0
 }
 """

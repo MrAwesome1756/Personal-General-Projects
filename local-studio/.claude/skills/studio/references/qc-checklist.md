@@ -14,10 +14,14 @@ Any Fail on a hero element = regenerate. Report Minor issues to Camden honestly.
 7. **Composition** — subject placement, headroom, negative space for overlays if needed.
 8. **Brand fit** — palette/grade consistent with the project bible; nothing off-brand or tacky.
 9. **Artifacts** — no watermarks, signatures, noise blotches, seams, duplicated limbs or objects.
-10. **Safety** — no real person's likeness without consent; nothing misleading for financial marketing.
+10. **Material realism** — metal shows directional grain and clean reflections; glass refracts and has edge lines;
+    liquids glow when backlit; wood/leather/fabric show real texture; nothing reads as plastic or CGI.
+11. **Object integrity** — correct part counts (watch hands, buttons, laces), symmetric where the real object is,
+    no fused or floating parts, plausible scale against the surface.
+12. **Safety** — no real person's likeness without consent; no real brand logos presented as genuine.
 
 ## Video clips (check 6–8 frames + first/last)
-1. **Identity drift** — face/wardrobe stays the same person across frames.
+1. **Shape drift** — the object keeps its exact shape, proportions, materials and any text across frames.
 2. **Warping** — backgrounds and hands don't morph; straight lines stay straight.
 3. **Motion** — the camera move is the one requested, smooth, and physically believable.
 4. **Flicker / boiling textures** — especially skin, hair, foliage, text.

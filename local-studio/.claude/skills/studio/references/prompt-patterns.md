@@ -37,6 +37,28 @@ Describe chronologically, like a paragraph of a screenplay, with camera language
 - LTX works best with detailed, literal, chronological descriptions (lighting, camera, subject, environment).
 - LTX-2 can generate ambient audio; describe sounds if wanted ("soft city ambience, distant traffic").
 
-## Consistent character without a LoRA
-Reuse the exact same description block ("a man in his 30s, short dark hair, trimmed beard, navy quarter-zip")
-and the same seed family. For true consistency (Camden himself), train a LoRA — see the studio-train skill.
+## Objects, materials and text (the main focus)
+Structure: **[shot type + object] + [materials, named precisely] + [surface/set] + [light: type, direction, what it
+does to the material] + [lens/aperture] + [angle] + [texture proof details]**
+
+> Premium product photograph of a matte black ceramic pour-over coffee dripper with a raw walnut base, on wet
+> dark slate. Long strip softbox from camera left creating a clean gradient along the glaze, thin rim light from
+> behind. 100mm macro lens at f/5.6, three-quarter angle slightly above. Visible glaze speckle, wood grain, water
+> droplets beading on the slate.
+
+In-image text:
+- Put the exact text in quotes, keep it short (1–4 words), and name the method: "embossed in gold foil",
+  "laser-engraved", "screen-printed", "debossed into leather", "etched into glass".
+- Name the typeface feel ("clean serif capitals", "condensed sans-serif") and where the text sits.
+- Qwen-Image is the strongest local model for text. If text still fails, render without it and add it in the edit.
+
+Object motion (image-to-video from an approved still):
+> The camera slowly orbits 90 degrees around the watch from left to right while a soft highlight sweeps across
+> the brushed steel case. The watch stays perfectly still and undistorted. Smooth, steady, premium commercial.
+
+- Tell the model what must stay rigid ("the bottle keeps its exact shape", "the text stays sharp and legible").
+- Liquids: describe the physics plainly ("amber liquid swirls once and settles, small bubbles rise").
+
+## Consistent object across shots
+Reuse the exact same description block for the object (materials, colors, proportions, any text) and the same
+seed family. For a reusable look across many products, train a style LoRA (studio-train skill).

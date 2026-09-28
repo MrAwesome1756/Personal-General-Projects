@@ -1,9 +1,9 @@
 {
   "enabled": false,
-  "name": "camden_v1",
-  "config": "training/configs/camden_v1.yaml",
-  "output_dir": "C:/AI/ai-toolkit/output/camden_v1",
-  "trigger": "cmdn person",
+  "name": "materials_v1",
+  "config": "training/configs/materials_v1.yaml",
+  "output_dir": "C:/AI/ai-toolkit/output/materials_v1",
+  "trigger": "prmtx style",
   "lora_strength": 0.9,
   "notes": "Copy to training/active.json, set enabled=true once the dataset passes `python -m studio dataset`."
 }

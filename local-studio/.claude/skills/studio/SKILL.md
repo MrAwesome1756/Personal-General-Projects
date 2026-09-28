@@ -9,6 +9,10 @@ You are the director, cinematographer, and editor. The local models (via ComfyUI
 All generation runs on this machine through `python -m studio ...`. **Never use external image/video
 APIs or websites.** That is the whole point of this setup.
 
+**Focus (set by Camden):** premium photorealistic **objects and materials** (real textures, lighting, smart
+angles), strong **in-image text** (engraving, embossing, packaging, signage), and **moving video of objects**
+(turntables, push-ins, macro slides, pours and splashes). No persona or people-centric work unless asked.
+
 ## Ground rules
 - Run `python -m studio doctor` at the start of a session if you have not yet. If ComfyUI is down, say so and
   point to `setup/start_comfy.*` rather than guessing.
@@ -67,7 +71,7 @@ Watch-check the final by extracting frames. Report: what was made, file paths, s
   "shots": [
     {"id": "s01", "type": "image", "prompt": "...", "seed": 1234},
     {"id": "s01v", "type": "video", "image": "@s01", "prompt": "slow dolly-in ...", "frames": 97},
-    {"id": "s02", "type": "image", "prompt": "...", "loras": [["camden_v1_latest.safetensors", 0.9]]}
+    {"id": "s02", "type": "image", "prompt": "...", "loras": [["materials_v1_latest.safetensors", 0.9]]}
   ]
 }
 ```
@@ -78,7 +82,7 @@ LTX typically 8n+1 (97, 121).
 ## Useful one-offs
 - Single image: `python -m studio image --prompt "..." --width 1024 --height 1280 --count 3 --project headshots`
 - Image-to-video: `python -m studio video --image outputs/x/s01.png --prompt "..." --frames 97 --wait-gpu`
-- With a trained LoRA: add `--lora camden_v1_latest.safetensors:0.9`
+- With a trained LoRA: add `--lora materials_v1_latest.safetensors:0.9` (prompt must include its trigger, e.g. `prmtx style`)
 - Free VRAM for the other agent: `python -m studio free`
 
 ## Honesty about limits
@@ -86,8 +90,8 @@ Local open models are excellent for stills and short clips but weaker than top c
 long takes, complex action, crowds, and lip-synced dialogue. Say so when a request leans on those, and
 design around it (shorter clips, cutaways, voiceover instead of on-camera dialogue).
 
-## Ethics & brand safety
-- Only generate a real person's likeness with their consent (Camden's own likeness is fine). No public figures.
-- No fake testimonials, fake "clients", or imagery implying guaranteed approvals/rates in Serve Funding marketing.
-- Remind Camden that LinkedIn/Meta/TikTok require or encourage AI-content labels for realistic media.
-- Use only models whose license fits the use (docs/MODELS.md). Default to commercial-safe models for business work.
+## Ethics & safety
+- Don't generate a real, identifiable person's likeness without their consent, and no public figures.
+- Don't reproduce real brands' logos or trademarks as if they were genuine products; invent names instead.
+- Realistic media posted publicly may need an AI-content label on social platforms; mention it when relevant.
+- Use only models whose license fits the use (docs/MODELS.md). Default to commercial-safe models.

@@ -1,11 +1,15 @@
 # Training (LoRA fine-tuning on the 5090)
 
 - `active.example.json` — copy to `active.json` and fill in to schedule nightly training.
+Current goal: a premium photoreal **materials / product look** (`materials_v1`), then focused add-ons and
+object-motion video. No people/persona training.
+
 - `configs/TEMPLATE_image_lora.yaml` — reference values for an ai-toolkit image LoRA. **Start from the example
   config that ships with your installed ai-toolkit** (`<ai-toolkit>/config/examples/`, pick the one for your base
   model) and copy these values into it; ai-toolkit field names change between versions.
 - `notes.md` — running log of what worked (written by Claude after each review).
-- Datasets live **outside** this repo (personal photos). Point the config's `folder_path` at them.
+- Datasets live **outside** this repo. Use only rights-cleared images (owned, commissioned, or CC0/public domain).
+  Point the config's `folder_path` at them.
 
 Flow: dataset → captions (Claude) → `python -m studio dataset <folder> --trigger "..."` → config →
 `active.json` → nightly run (or `python -m studio train`) → `outputs/nightly/<date>/` → `reports/nightly/<date>.md`.

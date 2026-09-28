@@ -3,12 +3,15 @@
 This project turns Claude Code into a photo/video director that generates **only on this PC's GPU**
 (RTX 5090, via ComfyUI). Owner: Camden. Machine admin: Kyler.
 
+Focus: premium photorealistic **objects and materials** (real textures, lighting, angles), **in-image text**,
+then **moving video of objects**. No persona/people training.
+
 ## Non-negotiables
 - **No external image/video generation services or APIs.** All generation goes through `python -m studio`.
 - The GPU is shared with a 24/7 agent. Check `python -m studio gpu` before heavy work, use `--wait-gpu` for
   video/batches, and run `python -m studio free` when done with a long session.
 - Look at outputs before reporting them (Read images; `python -m studio frames` for video).
-- Datasets and personal photos stay out of git (`.gitignore` covers `outputs/` and `datasets/`).
+- Training datasets stay out of git (`.gitignore` covers `outputs/` and `datasets/`) and must be rights-cleared.
 
 ## Skills
 - `studio`: making images and videos (treatment → keyframes → QC → image-to-video → edit).
@@ -25,7 +28,7 @@ python -m studio frames <clip.mp4>      # QC stills from a clip
 python -m studio sheet <images...> --out sheet.jpg
 python -m studio assemble <clips...> --out final.mp4 --aspect 16:9 [--music m.m4a] [--logo logo.png]
 python -m studio reframe final.mp4 --out final_9x16.mp4 --aspect 9:16
-python -m studio dataset <folder> --trigger "cmdn person"
+python -m studio dataset <folder> --trigger "prmtx style"
 python -m studio train                  # run training/active.json now
 python -m studio nightly                # what the scheduled task runs
 python -m studio benchmark [--video]
