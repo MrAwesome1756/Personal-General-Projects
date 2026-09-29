@@ -3,6 +3,8 @@
 Photorealistic image and video generation that runs **entirely on a local RTX 5090**, directed by Claude Code.
 No outside image/video AI services.
 
+- **Got this by email?** Gmail blocks PowerShell files, so they arrive as `.ps1.txt`. Run
+  `python setup/restore_windows_scripts.py` once after unzipping to rename them back.
 - **Setting it up?** Start with [docs/KYLER_SETUP_BRIEF.md](docs/KYLER_SETUP_BRIEF.md).
 - **Models and licenses:** [docs/MODELS.md](docs/MODELS.md)
 - **How Claude uses it:** [CLAUDE.md](CLAUDE.md), `.claude/skills/studio/` (directing) and `.claude/skills/studio-train/` (training)

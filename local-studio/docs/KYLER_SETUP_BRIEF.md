@@ -72,6 +72,9 @@ Either clone Camden's GitHub repo (`MrAwesome1756/Personal-General-Projects`, fo
 Camden gives you, and ask him for access), or unzip the `local-studio.zip` he sends. Put it somewhere permanent, e.g.
 `C:\AI\local-studio` or `~/local-studio`.
 
+**If it came by email:** Gmail blocks PowerShell files, so the four `.ps1` scripts are shipped as `.ps1.txt`.
+Run `python setup/restore_windows_scripts.py` once in the unzipped folder to rename them back.
+
 ### 4.3 Run the installer (installs ComfyUI + ai-toolkit in their own venvs; no model downloads)
 Windows (PowerShell):
 ```powershell
